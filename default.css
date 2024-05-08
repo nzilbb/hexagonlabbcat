@@ -1,0 +1,57 @@
+div#onze_search, div#onze_search_form, div#onze_search_button { 
+    display: inline;
+    vertical-align: middle;
+}
+
+table.onze_search_results, table.onze_transcript_speakers, table.onze_speaker_transcripts, table.onze_transcript, table.onze_speaker {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.onze_search_results caption, table.onze_transcript_speakers caption, table.onze_speaker_transcripts caption, table.onze_transcript caption, table.onze_speaker caption {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+table.onze_search_results td, table.onze_transcript_speakers td, table.onze_speaker_transcripts td {
+    border: 1px black dotted;
+    vertical-align: top;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+table.onze_search_results th, table.onze_transcript_speakers th, table.onze_speaker_transcripts th {
+    vertical-align: top;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+table.onze_transcript th, table.onze_speaker th {
+    width: 20%;
+    white-space: nowrap;
+}
+
+table.onze_search_results th.scrollbarspacer {
+    width: 20px;
+}
+
+/*
+table.onze_search_results tbody {
+    overflow: auto; 
+    height: 300px;
+}
+*/
+table.onze_transcript td {
+    vertical-align: top;
+}
+table.onze_transcript th {
+    vertical-align: top;
+    text-align: left;
+}
+
+
+div.media_link {
+    float: right;
+}
+div.media_link img {
+    border: 0;
+}

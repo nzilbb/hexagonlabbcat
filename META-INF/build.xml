@@ -1,0 +1,25 @@
+<project name="onzeminer" default="all" basedir=".">
+  <description>
+    ONZE Miner module
+  </description>
+  <property name="src" location=".."/>
+  <property name="dist"  location="../.."/>
+  
+  <target name="init">
+    <tstamp/>
+  </target>
+
+  <target name="all" description="all" depends="tidy,init">
+    <jar destfile="${dist}/${ant.project.name}.jar"
+	 comment="Built ${DSTAMP}.${TSTAMP}"
+	 >
+      <fileset dir="${src}" includes="**/*.*" />
+    </jar>
+  </target>
+  
+  <target name="tidy" description="clean up backup files" >
+    <delete verbose="true">
+      <fileset dir=".." includes="**/*~" defaultexcludes="no" />
+    </delete>
+  </target>
+</project>

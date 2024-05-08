@@ -1,0 +1,85 @@
+<module>
+ <default-name>LaBB-CAT integration</default-name>
+ <version>2.01</version>
+ <author>Robert Fromont</author>
+ <description>Access LaBB-CAT transcript/speaker meta-data</description>
+ <keywords />
+ <default-groups>
+   <group>admin</group>
+   <group>user</group>
+   <group>anyone</group>
+ </default-groups>
+ <properties>
+   <property>
+     <name>dbDriver</name>
+     <type>string</type>
+     <label>Database Driver</label>
+     <description>JDBC driver class name for the LaBB-CAT database</description>
+     <default-value>com.mysql.cj.jdbc.Driver</default-value>
+     <version>0.1</version>
+   </property>
+   <property>
+     <name>dbConnectString</name>
+     <type>string</type>
+     <label>Database Connect String</label>
+     <description>JDBC connect string for the LaBB-CAT database</description>
+     <default-value>jdbc:mysql://localhost/labbcat?dontTrackOpenResources=true</default-value>
+     <version>0.1</version>
+   </property>
+   <property>
+     <name>dbUser</name>
+     <type>string</type>
+     <label>Database User</label>
+     <description>Username for LaBB-CAT database connection</description>
+     <default-value>labbcat</default-value>
+     <version>0.1</version>
+   </property>
+   <property>
+     <name>dbPassword</name>
+     <type>string</type>
+     <label>Database Password</label>
+     <description>Password for LaBB-CAT database connection</description>
+     <default-value>tr@n5cr1pt</default-value>
+     <version>0.1</version>
+   </property>
+   <property>
+     <name>mainSpeakerOnly</name>
+     <type>boolean</type>
+     <label>Main Speaker Only</label>
+     <description>Whether to search/list all speakers, or only those marked as main speakers</description>
+     <style>radio</style>
+     <default-value>0</default-value>
+     <version>0.22</version>
+   </property>
+ </properties> 
+ <blocks>
+   <block>
+     <page>block_search</page>
+     <default-position>left</default-position>
+     <default-name>Quick Search</default-name>
+     <default-groups>
+       <group>admin</group>
+       <group>user</group>
+       <group>anyone</group>
+     </default-groups>
+   </block>
+   <block>
+     <page>admin/block_admin</page>
+     <version>0.2</version>
+     <default-position>left</default-position>
+     <default-name>LaBB-CAT</default-name>
+     <default-groups>
+       <group>admin</group>
+     </default-groups>
+   </block>
+ </blocks>
+ <functions>
+   <function>
+     <name>admin</name>
+     <pattern>^admin/.*</pattern>
+     <default-groups>
+       <group>admin</group>
+     </default-groups>
+   </function>
+ </functions>
+</module>
