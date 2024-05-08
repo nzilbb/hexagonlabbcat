@@ -1,6 +1,6 @@
-<project name="onzeminer" default="all" basedir=".">
+<project name="labbcat" default="all" basedir=".">
   <description>
-    ONZE Miner module
+    LaBB-CAT integration module
   </description>
   <property name="src" location=".."/>
   <property name="dist"  location="../.."/>
